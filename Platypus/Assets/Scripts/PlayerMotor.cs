@@ -167,7 +167,7 @@ public class PlayerMotor : MonoBehaviour
         {
             if (XCI.GetAxis(XboxAxis.RightStickX, controller) == 0)
             {
-                cam.transform.localEulerAngles = Vector3.zero;
+                cam.transform.localEulerAngles = new Vector3(xCamRotation,0f,0f);
                 currentCameraRotationX = 0f;
                 Debug.Log("zero");
 

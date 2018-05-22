@@ -21,8 +21,8 @@ public class PlayerController : MonoBehaviour {
     {
         motor = GetComponent<PlayerMotor>();                                                //gets components of Player Motor
 
-        Cursor.lockState = CursorLockMode.Confined;                                         //locks cursor on center of game screen
-        Cursor.lockState = CursorLockMode.Locked;
+       // Cursor.lockState = CursorLockMode.Confined;                                         //locks cursor on center of game screen
+       // Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
