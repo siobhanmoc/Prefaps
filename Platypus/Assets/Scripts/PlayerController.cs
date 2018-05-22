@@ -65,6 +65,7 @@ public class PlayerController : MonoBehaviour {
 
         Vector3 _rotation = new Vector3(0f, _xRot, 0f) * rotSpeed;                       //sets the value of y_rot as the rotation in relation to the y-axis with a look speed from sensitivity
 
+
         motor.Rotate(_rotation);                                                         //sends the value of rotation to playermotor to rotate the player in the y-axis
 
         float _camRot;
@@ -91,6 +92,7 @@ public class PlayerController : MonoBehaviour {
             _camRotX = Input.GetAxisRaw("Mouse X");
             _cameraRotationX = _camRotX * Sensitivity;
         }
+
         motor.RotateCameraX(-_cameraRotationX);                                         //sends the value of camera rotation x to player motor to rotate player in the x axis
         motor.RotateCamera(-_cameraRotationY);
 

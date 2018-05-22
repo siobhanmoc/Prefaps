@@ -33,6 +33,7 @@ public class PlayerMotor : MonoBehaviour
     public LayerMask groundLayers; //layers for ground
     private bool jumpButtonPressed = false; //bool for checking if player has jumped
     private bool jumping = false;
+    public float CameraReturnSpeed = 500.0f;
 
     public float xCamRotation = 45f; //xCamera Rotation
 
@@ -164,13 +165,30 @@ public class PlayerMotor : MonoBehaviour
     {
         if (cam != null)
         {
-            currentCameraRotationY -= cameraRotationY;
-            currentCameraRotationY = Mathf.Clamp(-camRotLimit, currentCameraRotationY, camRotLimit);
+            if (XCI.GetAxis(XboxAxis.RightStickX, controller) == 0)
+            {
+                cam.transform.localEulerAngles = Vector3.zero;
+                currentCameraRotationX = 0f;
+                Debug.Log("zero");
 
-            currentCameraRotationX -= cameraRotationX;
-            currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -camRotLimit, camRotLimit);
+                //if (currentCameraRotationX > transform.forward.x)
+                //currentCameraRotationX += transform.forward.x * CameraReturnSpeed;
 
-            cam.transform.localEulerAngles = new Vector3(xCamRotation, currentCameraRotationX, 0f);
+                //if (currentCameraRotationX < transform.forward.x)
+                //    currentCameraRotationX -= transform.forward.x * CameraReturnSpeed;
+
+                //if (currentCameraRotationX == transform.forward.x)
+                //    currentCameraRotationX = transform.forward.x;
+            }
+            else
+            {
+                currentCameraRotationX -= cameraRotationX;
+
+                currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -camRotLimit, camRotLimit);
+                cam.transform.localEulerAngles = new Vector3(xCamRotation, currentCameraRotationX, 0f);
+            }
+            //
+            
         }
     }
 }

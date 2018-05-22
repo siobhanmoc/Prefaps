@@ -52,6 +52,9 @@ public class PlayerAttack : MonoBehaviour
     float spawnLengthLL = 0f;
     float spawnLengthRL = 0f;
 
+    float kickLL = 0f;
+    float kickRL = 0f;
+
     public float timer = 0f;
 
     private void Update()
@@ -75,9 +78,7 @@ public class PlayerAttack : MonoBehaviour
 
             spawnLengthLA = cooldownTimeLA;
         }
-
-
-
+        
         if (spawnLengthLA > 0)
         {
             spawnLengthLA -= Time.deltaTime;
@@ -108,9 +109,7 @@ public class PlayerAttack : MonoBehaviour
 
             spawnLengthRA = cooldownTimeRA;
         }
-
-
-
+        
         if (spawnLengthRA > 0)
         {
             spawnLengthRA -= Time.deltaTime;
@@ -120,9 +119,97 @@ public class PlayerAttack : MonoBehaviour
             Destroy(RightPunch);
         }
 
+        if (XCI.GetAxis(XboxAxis.LeftTrigger) > 0)
+        {
+            punchedLL = true;
+            kickLL++;
+        }
+
+        if (XCI.GetAxis(XboxAxis.LeftTrigger) <= 0)
+        {
+            punchedLL = false;
+        }
+
+        if ((punchedLL) && kickLL == 1 && cooldownTimerLL <= 0)
+        {
+            LeftKick = Instantiate(attackSphereLeftKick, legSpawnLeft.position, legSpawnLeft.rotation);
+
+            if (LeftKick == null)
+                return;
+
+            Rigidbody rbLeftKick = LeftKick.GetComponent<Rigidbody>();
+
+            if (rbLeftKick == null)
+                return;
+
+            rbLeftKick.AddForce(LeftKick.transform.forward * forceOnFire);
+
+            cooldownTimerLL = cooldownTimeLL;
+
+            spawnLengthLL = cooldownTimeLL;
+        }
+
+        if (spawnLengthLL > 0)
+        {
+            spawnLengthLL -= Time.deltaTime;
+        }
+        else
+        {
+            Destroy(LeftKick);
+            kickLL = 0;
+        }
+
+        if (XCI.GetAxis(XboxAxis.RightTrigger) > 0)
+        {
+            punchedRL = true;
+            kickRL++;
+        }
+
+        if (XCI.GetAxis(XboxAxis.RightTrigger) <= 0)
+        {
+            punchedRL = false;
+        }
+
+        if ((punchedRL) && kickRL == 1 && cooldownTimerRL <= 0)
+        {
+            RightKick = Instantiate(attackSphereRightKick, legSpawnRight.position, legSpawnRight.rotation);
+
+            if (RightKick == null)
+                return;
+
+            Rigidbody rbRightKick = RightKick.GetComponent<Rigidbody>();
+
+            if (rbRightKick == null)
+                return;
+
+            rbRightKick.AddForce(RightKick.transform.forward * forceOnFire);
+
+            cooldownTimerRL = cooldownTimeRL;
+
+            spawnLengthRL = cooldownTimeRL;
+        }
+
+        if (spawnLengthRL > 0)
+        {
+            spawnLengthRL -= Time.deltaTime;
+        }
+        else
+        {
+            Destroy(RightKick);
+            kickRL = 0;
+        }
 
         if (cooldownTimerLA > 0)
             cooldownTimerLA -= Time.deltaTime;
+
+        if (cooldownTimerRA > 0)
+            cooldownTimerRA -= Time.deltaTime;
+
+        if (cooldownTimerLL > 0)
+            cooldownTimerLL -= Time.deltaTime;
+
+        if (cooldownTimerRL > 0)
+            cooldownTimerRL -= Time.deltaTime;
 
     }
 }
