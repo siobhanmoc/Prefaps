@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4419653807827566}
   - component: {fileID: 33296046434882318}
   - component: {fileID: 23330171988605960}
-  - component: {fileID: 95274111577920678}
   m_Layer: 0
   m_Name: cup (2)
   m_TagString: Untagged
@@ -39,7 +38,6 @@ GameObject:
   - component: {fileID: 4726967227635912}
   - component: {fileID: 33425757496813680}
   - component: {fileID: 23733489939143716}
-  - component: {fileID: 95351922587115056}
   m_Layer: 0
   m_Name: cup
   m_TagString: Untagged
@@ -57,7 +55,6 @@ GameObject:
   - component: {fileID: 4024303658459354}
   - component: {fileID: 33181943825936788}
   - component: {fileID: 23468660318839244}
-  - component: {fileID: 95172537351448994}
   m_Layer: 0
   m_Name: cup (1)
   m_TagString: Untagged
@@ -75,8 +72,7 @@ GameObject:
   - component: {fileID: 4851114302730220}
   - component: {fileID: 33004853866039246}
   - component: {fileID: 23149926679003768}
-  - component: {fileID: 95531433401153124}
-  - component: {fileID: 65998014177216610}
+  - component: {fileID: 64670416473959292}
   m_Layer: 0
   m_Name: drink_stall
   m_TagString: Untagged
@@ -130,7 +126,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1803599508337628}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 2.489594, y: 0.603, z: -18.506}
+  m_LocalPosition: {x: -11.625626, y: 0.50557923, z: -1.4787399}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4726967227635912}
@@ -304,8 +300,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1132715786418874}
   m_Mesh: {fileID: 4300000, guid: 5360cae326c6a7148b4b783771dd6919, type: 3}
---- !u!65 &65998014177216610
-BoxCollider:
+--- !u!64 &64670416473959292
+MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -313,74 +309,8 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.896039, y: 4.64726, z: 2.2086675}
-  m_Center: {x: 0, y: 2.3180506, z: -0.0000032186508}
---- !u!95 &95172537351448994
-Animator:
   serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1758539845940210}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5360cae326c6a7148b4b783771dd6919, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95274111577920678
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1039863474848802}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5360cae326c6a7148b4b783771dd6919, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95351922587115056
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1132715786418874}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 5360cae326c6a7148b4b783771dd6919, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95531433401153124
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1803599508337628}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: f7a4bcd2df56c8c4fada23c95c12639b, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: f7a4bcd2df56c8c4fada23c95c12639b, type: 3}
