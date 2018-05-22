@@ -27,6 +27,12 @@ public class CollisionIgnoreAttack : MonoBehaviour {
             Rigidbody rb = GetComponent<Rigidbody>();
 
             rb.AddForceAtPosition(transform.forward * forceOnFire, transform.forward);
+
+            int clutterScore = 10;
+
+            manager.GetComponent<GameManager>().addScore(clutterScore);
+
+            collision.gameObject.tag = "AttackedObject" ;
         }
     }
 }
