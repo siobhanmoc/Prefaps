@@ -12,7 +12,7 @@ public class PlayerMotor : MonoBehaviour
 {
     //Variables
     [SerializeField]
-	private GameObject cam;
+    private Camera cam;
 
     [SerializeField]
     private float camRotLimit = 85f; //camera Rotation Limit
@@ -167,8 +167,26 @@ public class PlayerMotor : MonoBehaviour
         {
             if (XCI.GetAxis(XboxAxis.RightStickX, controller) == 0)
             {
-                cam.transform.localEulerAngles = new Vector3(xCamRotation,0f,0f);
-                currentCameraRotationX = 0f;
+                if (currentCameraRotationX > 0)
+                {
+                    currentCameraRotationX -= CameraReturnSpeed * Time.deltaTime;
+                    //currentCameraRotationX += CameraReturnSpeed * Time.deltaTime;
+                }
+
+                if (currentCameraRotationX < 0)
+                {
+                    currentCameraRotationX += CameraReturnSpeed * Time.deltaTime;
+                }
+
+                if (currentCameraRotationX == 0)
+                {
+                    currentCameraRotationX = 0f;
+                }
+
+                Debug.Log(currentCameraRotationX);
+
+                cam.transform.localEulerAngles = new Vector3(xCamRotation,currentCameraRotationX,0f);
+                //currentCameraRotationX = 0f;
                 //Debug.Log("zero");
 
                 //if (currentCameraRotationX > transform.forward.x)
