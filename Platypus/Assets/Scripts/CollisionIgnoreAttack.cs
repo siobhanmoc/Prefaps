@@ -5,7 +5,7 @@ using UnityEngine;
 public class CollisionIgnoreAttack : MonoBehaviour {
 
     public LayerMask PlayerLayer;
-    public GameManager manager;
+//    public GameManager manager;
     [SerializeField]
     private float forceOnFire = 1.0f;
     private void OnCollisionEnter(Collision collision)
