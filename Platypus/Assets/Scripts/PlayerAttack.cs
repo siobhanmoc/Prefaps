@@ -22,8 +22,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject LeftKick = null;
     public GameObject RightKick = null;
 
-    [SerializeField]
-    private float forceOnFire = 1.0f;
+   
     [SerializeField]
     private float cooldownTimeLA = 0.0f;
     [SerializeField]
@@ -62,12 +61,13 @@ public class PlayerAttack : MonoBehaviour
             //if (LeftPunch == null)
             //    return;
 
-            //Rigidbody rbLeftPunch = LeftPunch.GetComponent<Rigidbody>();
+            Rigidbody rbLeftPunch = LeftPunch.GetComponent<Rigidbody>();
 
             //if (rbLeftPunch == null)
             //    return;
-
+            
             //rbLeftPunch.AddForce(LeftPunch.transform.forward * forceOnFire);
+            //rbLeftPunch.AddForceAtPosition(LeftPunch.transform.forward * forceOnFire, LeftPunch.transform.forward);
 
             cooldownTimerLA = cooldownTimeLA;
 
@@ -95,12 +95,13 @@ public class PlayerAttack : MonoBehaviour
             //if (RightPunch == null)
             //    return;
 
-            //Rigidbody rbRightPunch = RightPunch.GetComponent<Rigidbody>();
+            Rigidbody rbRightPunch = RightPunch.GetComponent<Rigidbody>();
 
             //if (rbRightPunch == null)
             //    return;
 
             //rbRightPunch.AddForce(RightPunch.transform.forward * forceOnFire);
+            //rbRightPunch.AddForceAtPosition(RightPunch.transform.forward * forceOnFire, RightPunch.transform.forward);
 
             cooldownTimerRA = cooldownTimeRA;
 
@@ -135,12 +136,13 @@ public class PlayerAttack : MonoBehaviour
             //if (LeftKick == null)
             //    return;
 
-            //Rigidbody rbLeftKick = LeftKick.GetComponent<Rigidbody>();
+            Rigidbody rbLeftKick = LeftKick.GetComponent<Rigidbody>();
 
             //if (rbLeftKick == null)
             //    return;
 
             //rbLeftKick.AddForce(LeftKick.transform.forward * forceOnFire);
+            //rbLeftKick.AddForceAtPosition(LeftKick.transform.forward * forceOnFire, LeftKick.transform.forward);
 
             cooldownTimerLL = cooldownTimeLL;
 
@@ -177,12 +179,13 @@ public class PlayerAttack : MonoBehaviour
             //if (RightKick == null)
             //    return;
 
-            //Rigidbody rbRightKick = RightKick.GetComponent<Rigidbody>();
+            Rigidbody rbRightKick = RightKick.GetComponent<Rigidbody>();
 
             //if (rbRightKick == null)
             //    return;
 
             //rbRightKick.AddForce(RightKick.transform.forward * forceOnFire);
+            //rbRightKick.AddForceAtPosition(RightKick.transform.forward * forceOnFire, RightKick.transform.forward);
 
             cooldownTimerRL = cooldownTimeRL;
 
