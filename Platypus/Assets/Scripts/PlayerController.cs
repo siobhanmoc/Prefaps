@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour {
          if (numberOfControllers >= 1)
         {
             //moves player according to axis of left stick
-            _xRot = XCI.GetAxis(XboxAxis.LeftStickY, controller);
+            _xRot = XCI.GetAxis(XboxAxis.LeftStickX, controller);
         }
         else
         {
@@ -76,10 +76,10 @@ public class PlayerController : MonoBehaviour {
         if (numberOfControllers >= 1)
         {
             //moves player according to axis of left stick
-            _camRot = XCI.GetAxisRaw(XboxAxis.RightStickY, controller);                  //gets value of mouse Y-axis and stores it in xRot
+            _camRot = XCI.GetAxis(XboxAxis.RightStickY, controller);                  //gets value of mouse Y-axis and stores it in xRot
             _cameraRotationY = _camRot * Sensitivity;                                    //multiplies xRot with the mouse sensitivity to get the value of camera rotation in the x_axis
 
-            _camRotX = XCI.GetAxisRaw(XboxAxis.RightStickX, controller);
+            _camRotX = XCI.GetAxis(XboxAxis.RightStickX, controller);
             _cameraRotationX = _camRotX * Sensitivity;
         }
         else
