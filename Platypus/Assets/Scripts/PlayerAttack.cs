@@ -12,15 +12,15 @@ public class PlayerAttack : MonoBehaviour
     public Transform armSpawnRight = null;
     public Transform legSpawnLeft = null;
     public Transform legSpawnRight = null;
-    public GameObject attackSphereLeftPunch = null;
-    public GameObject attackSphereRightPunch = null;
-    public GameObject attackSphereLeftKick = null;
-    public GameObject attackSphereRightKick = null;
+    private GameObject attackSphereLeftPunch = null;
+    private GameObject attackSphereRightPunch = null;
+    private GameObject attackSphereLeftKick = null;
+    private GameObject attackSphereRightKick = null;
 
-    private GameObject LeftPunch = null;
-    private GameObject RightPunch = null;
-    private GameObject LeftKick = null;
-    private GameObject RightKick = null;
+    public GameObject LeftPunch = null;
+    public GameObject RightPunch = null;
+    public GameObject LeftKick = null;
+    public GameObject RightKick = null;
 
     [SerializeField]
     private float forceOnFire = 1.0f;
@@ -32,13 +32,7 @@ public class PlayerAttack : MonoBehaviour
     private float cooldownTimeLL = 0.0f;
     [SerializeField]
     private float cooldownTimeRL = 0.0f;
-    [SerializeField]
-    private float range = 0.0f;
 
-    float rangeTimer = 1f;
-
-    bool punchedLA = false;
-    bool punchedRA = false;
     bool punchedLL = false;
     bool punchedRL = false;
 
@@ -62,17 +56,18 @@ public class PlayerAttack : MonoBehaviour
 
         if ((Input.GetMouseButtonDown(0) || XCI.GetButtonDown(XboxButton.LeftBumper)) && cooldownTimerLA <= 0)
         {
-            LeftPunch = Instantiate(attackSphereLeftPunch, armSpawnLeft.position, armSpawnLeft.rotation);
+            LeftPunch.SetActive(true);
+            //LeftPunch = Instantiate(attackSphereLeftPunch, armSpawnLeft.position, armSpawnLeft.rotation);
 
-            if (LeftPunch == null)
-                return;
+            //if (LeftPunch == null)
+            //    return;
 
-            Rigidbody rbLeftPunch = LeftPunch.GetComponent<Rigidbody>();
+            //Rigidbody rbLeftPunch = LeftPunch.GetComponent<Rigidbody>();
 
-            if (rbLeftPunch == null)
-                return;
+            //if (rbLeftPunch == null)
+            //    return;
 
-            rbLeftPunch.AddForce(LeftPunch.transform.forward * forceOnFire);
+            //rbLeftPunch.AddForce(LeftPunch.transform.forward * forceOnFire);
 
             cooldownTimerLA = cooldownTimeLA;
 
@@ -85,7 +80,7 @@ public class PlayerAttack : MonoBehaviour
         }
         else
         {
-            Destroy(LeftPunch);
+            LeftPunch.SetActive(false);
         }
 
         timer = spawnLengthLA;
@@ -93,17 +88,19 @@ public class PlayerAttack : MonoBehaviour
 
         if ((Input.GetMouseButtonDown(1) || XCI.GetButtonDown(XboxButton.RightBumper)) && cooldownTimerRA <= 0)
         {
-            RightPunch = Instantiate(attackSphereRightPunch, armSpawnRight.position, armSpawnRight.rotation);
+            RightPunch.SetActive(true);
 
-            if (RightPunch == null)
-                return;
+            //RightPunch = Instantiate(attackSphereRightPunch, armSpawnRight.position, armSpawnRight.rotation);
 
-            Rigidbody rbRightPunch = RightPunch.GetComponent<Rigidbody>();
+            //if (RightPunch == null)
+            //    return;
 
-            if (rbRightPunch == null)
-                return;
+            //Rigidbody rbRightPunch = RightPunch.GetComponent<Rigidbody>();
 
-            rbRightPunch.AddForce(RightPunch.transform.forward * forceOnFire);
+            //if (rbRightPunch == null)
+            //    return;
+
+            //rbRightPunch.AddForce(RightPunch.transform.forward * forceOnFire);
 
             cooldownTimerRA = cooldownTimeRA;
 
@@ -116,7 +113,7 @@ public class PlayerAttack : MonoBehaviour
         }
         else
         {
-            Destroy(RightPunch);
+            RightPunch.SetActive(false);
         }
 
         if (XCI.GetAxis(XboxAxis.LeftTrigger) > 0)
@@ -132,17 +129,18 @@ public class PlayerAttack : MonoBehaviour
 
         if ((punchedLL) && kickLL == 1 && cooldownTimerLL <= 0)
         {
-            LeftKick = Instantiate(attackSphereLeftKick, legSpawnLeft.position, legSpawnLeft.rotation);
+            LeftKick.SetActive(true);
+            //LeftKick = Instantiate(attackSphereLeftKick, legSpawnLeft.position, legSpawnLeft.rotation);
 
-            if (LeftKick == null)
-                return;
+            //if (LeftKick == null)
+            //    return;
 
-            Rigidbody rbLeftKick = LeftKick.GetComponent<Rigidbody>();
+            //Rigidbody rbLeftKick = LeftKick.GetComponent<Rigidbody>();
 
-            if (rbLeftKick == null)
-                return;
+            //if (rbLeftKick == null)
+            //    return;
 
-            rbLeftKick.AddForce(LeftKick.transform.forward * forceOnFire);
+            //rbLeftKick.AddForce(LeftKick.transform.forward * forceOnFire);
 
             cooldownTimerLL = cooldownTimeLL;
 
@@ -155,7 +153,8 @@ public class PlayerAttack : MonoBehaviour
         }
         else
         {
-            Destroy(LeftKick);
+            LeftKick.SetActive(false);
+            //Destroy(LeftKick);
             kickLL = 0;
         }
 
@@ -172,17 +171,18 @@ public class PlayerAttack : MonoBehaviour
 
         if ((punchedRL) && kickRL == 1 && cooldownTimerRL <= 0)
         {
-            RightKick = Instantiate(attackSphereRightKick, legSpawnRight.position, legSpawnRight.rotation);
+            RightKick.SetActive(true);
+            //RightKick = Instantiate(attackSphereRightKick, legSpawnRight.position, legSpawnRight.rotation);
 
-            if (RightKick == null)
-                return;
+            //if (RightKick == null)
+            //    return;
 
-            Rigidbody rbRightKick = RightKick.GetComponent<Rigidbody>();
+            //Rigidbody rbRightKick = RightKick.GetComponent<Rigidbody>();
 
-            if (rbRightKick == null)
-                return;
+            //if (rbRightKick == null)
+            //    return;
 
-            rbRightKick.AddForce(RightKick.transform.forward * forceOnFire);
+            //rbRightKick.AddForce(RightKick.transform.forward * forceOnFire);
 
             cooldownTimerRL = cooldownTimeRL;
 
@@ -195,7 +195,8 @@ public class PlayerAttack : MonoBehaviour
         }
         else
         {
-            Destroy(RightKick);
+            RightKick.SetActive(false);
+            //Destroy(RightKick);
             kickRL = 0;
         }
 

@@ -169,7 +169,7 @@ public class PlayerMotor : MonoBehaviour
             {
                 cam.transform.localEulerAngles = new Vector3(xCamRotation,0f,0f);
                 currentCameraRotationX = 0f;
-                Debug.Log("zero");
+                //Debug.Log("zero");
 
                 //if (currentCameraRotationX > transform.forward.x)
                 //currentCameraRotationX += transform.forward.x * CameraReturnSpeed;
