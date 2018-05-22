@@ -34,6 +34,8 @@ public class PlayerMotor : MonoBehaviour
     private bool jumpButtonPressed = false; //bool for checking if player has jumped
     private bool jumping = false;
 
+    public float xCamRotation = 45f; //xCamera Rotation
+
     private XboxController controller; //getting instance of XBox Controller
 
     private Rigidbody rb;
@@ -168,7 +170,7 @@ public class PlayerMotor : MonoBehaviour
             currentCameraRotationX -= cameraRotationX;
             currentCameraRotationX = Mathf.Clamp(currentCameraRotationX, -camRotLimit, camRotLimit);
 
-            cam.transform.localEulerAngles = new Vector3(0f, currentCameraRotationX, 0f);
+            cam.transform.localEulerAngles = new Vector3(xCamRotation, currentCameraRotationX, 0f);
         }
     }
 }
