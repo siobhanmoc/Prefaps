@@ -34,7 +34,7 @@ public class GameManagerMain : MonoBehaviour {
 
     public void ChangeIntToString()
     {
-        LoadScene();
+        LoadScore();
 
         highscore.text = HighScore.ToString();
         highscore2.text = HighScore2.ToString();
@@ -45,7 +45,7 @@ public class GameManagerMain : MonoBehaviour {
 
     public void LoadScene()
     {
-        SceneManager.LoadSceneAsync("Main scene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Exit()

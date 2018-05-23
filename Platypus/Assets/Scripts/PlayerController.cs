@@ -96,10 +96,10 @@ public class PlayerController : MonoBehaviour {
         motor.RotateCameraX(-_cameraRotationX);                                         //sends the value of camera rotation x to player motor to rotate player in the x axis
         motor.RotateCamera(-_cameraRotationY);
 
-        if (Input.GetKeyDown(KeyCode.Escape))                                         //checks if escape button is pressed
-        {
-            Quit();                                                                   //if yes, call on Quit function
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape))                                         //checks if escape button is pressed
+        //{
+        //    Quit();                                                                   //if yes, call on Quit function
+        //}
     }
 
     /*Quit Function*/

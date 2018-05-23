@@ -57,6 +57,9 @@ public class GameManager : MonoBehaviour {
         {
             ContinueGame();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Exit();
     }
 
     public void addScore(int Point)
@@ -82,6 +85,6 @@ public class GameManager : MonoBehaviour {
     {
         GameManagerMain.curScore = score;
         //score = 0;
-        SceneManager.LoadSceneAsync("Menu");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex -1);
     }
 }
