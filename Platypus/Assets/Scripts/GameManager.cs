@@ -38,12 +38,12 @@ public class GameManager : MonoBehaviour {
         Debug.Log(score);
 		playerScore.text = "" + score.ToString();
 
-        if (XCI.GetButtonDown(XboxButton.Start) && state == 0)
+        if (XCI.GetButtonDown(XboxButton.Start, controller) && state == 0)
         {
             paused = true;
         }
 
-        if (XCI.GetButtonDown(XboxButton.Start) && state == 1)
+        if (XCI.GetButtonDown(XboxButton.Start, controller) && state == 1)
         {
             paused = false;
         }
