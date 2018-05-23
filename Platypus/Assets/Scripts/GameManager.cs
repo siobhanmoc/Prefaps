@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 enum GameState
 {
@@ -11,6 +12,8 @@ enum GameState
 public class GameManager : MonoBehaviour {
 
     public int score = 0;
+
+	public Text playerScore;
     
     // Use this for initialization
 	void Start ()
@@ -22,6 +25,7 @@ public class GameManager : MonoBehaviour {
 	void Update ()
     {
         Debug.Log(score);
+		playerScore.text = "" + score.ToString();
 	}
 
     public void addScore(int Point)

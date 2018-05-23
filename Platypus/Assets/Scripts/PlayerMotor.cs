@@ -12,7 +12,7 @@ public class PlayerMotor : MonoBehaviour
 {
     //Variables
     [SerializeField]
-    private Camera cam;
+    private GameObject cam;
 
     [SerializeField]
     private float camRotLimit = 85f; //camera Rotation Limit

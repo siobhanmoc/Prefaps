@@ -5,11 +5,18 @@ using UnityEngine;
 public class CollisionIgnoreAttack : MonoBehaviour {
 
     public LayerMask PlayerLayer;
-//    public GameManager manager;
+    private GameManager manager;
+
     [SerializeField]
     private float forceOnFire = 1.0f;
+
+	private void Start ()
+	{
+		manager = FindObjectOfType<GameManager>();
+	}
+
     private void OnCollisionEnter(Collision collision)
-    {
+	{
         if (collision.gameObject.tag == "Player")
         {
             Physics.IgnoreCollision(collision.gameObject.GetComponent<Collider>(), this.GetComponent<Collider>());
