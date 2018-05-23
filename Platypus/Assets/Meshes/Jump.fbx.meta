@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8fe68e99566837d4fb2fae5a3d326439
-timeCreated: 1527037562
+guid: a6446cd069907924e833f614499a09d7
+timeCreated: 1527038908
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -9,54 +9,54 @@ ModelImporter:
     100002: Beak_jnt
     100004: joint12
     100006: joint9
-    100008: Left_Arm01_jnt
-    100010: Left_Arm02_jnt
-    100012: Left_Arm03_jnt
-    100014: Left_Leg01_jnt
-    100016: Left_Leg02_jnt
-    100018: Left_Leg03_jnt
-    100020: Neck_jnt
-    100022: Pelvis_jnt
-    100024: polySurface1
-    100026: Right_Arm01_jnt
-    100028: Right_Arm02_jnt
-    100030: Right_Arm03_jnt
-    100032: Right_Leg01_jnt
-    100034: Right_Leg02_jnt
-    100036: Right_Leg03_jnt
-    100038: Root_jnt
-    100040: Spine_01
-    100042: Spine_02
-    100044: Tail_jnt
-    100046: //RootNode
+    100008: //RootNode
+    100010: Left_Arm01_jnt
+    100012: Left_Arm02_jnt
+    100014: Left_Arm03_jnt
+    100016: Left_Leg01_jnt
+    100018: Left_Leg02_jnt
+    100020: Left_Leg03_jnt
+    100022: Neck_jnt
+    100024: Pelvis_jnt
+    100026: polySurface1
+    100028: Right_Arm01_jnt
+    100030: Right_Arm02_jnt
+    100032: Right_Arm03_jnt
+    100034: Right_Leg01_jnt
+    100036: Right_Leg02_jnt
+    100038: Right_Leg03_jnt
+    100040: Root_jnt
+    100042: Spine_01
+    100044: Spine_02
+    100046: Tail_jnt
     400000: back
     400002: Beak_jnt
     400004: joint12
     400006: joint9
-    400008: Left_Arm01_jnt
-    400010: Left_Arm02_jnt
-    400012: Left_Arm03_jnt
-    400014: Left_Leg01_jnt
-    400016: Left_Leg02_jnt
-    400018: Left_Leg03_jnt
-    400020: Neck_jnt
-    400022: Pelvis_jnt
-    400024: polySurface1
-    400026: Right_Arm01_jnt
-    400028: Right_Arm02_jnt
-    400030: Right_Arm03_jnt
-    400032: Right_Leg01_jnt
-    400034: Right_Leg02_jnt
-    400036: Right_Leg03_jnt
-    400038: Root_jnt
-    400040: Spine_01
-    400042: Spine_02
-    400044: Tail_jnt
-    400046: //RootNode
+    400008: //RootNode
+    400010: Left_Arm01_jnt
+    400012: Left_Arm02_jnt
+    400014: Left_Arm03_jnt
+    400016: Left_Leg01_jnt
+    400018: Left_Leg02_jnt
+    400020: Left_Leg03_jnt
+    400022: Neck_jnt
+    400024: Pelvis_jnt
+    400026: polySurface1
+    400028: Right_Arm01_jnt
+    400030: Right_Arm02_jnt
+    400032: Right_Arm03_jnt
+    400034: Right_Leg01_jnt
+    400036: Right_Leg02_jnt
+    400038: Right_Leg03_jnt
+    400040: Root_jnt
+    400042: Spine_01
+    400044: Spine_02
+    400046: Tail_jnt
     2000000: back
     2100000: lambert2SG1
     4300000: polySurface1
-    7400000: Take 001
+    7400000: Jump
     9500000: //RootNode
     13700000: polySurface1
   externalObjects: {}
@@ -85,35 +85,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      firstFrame: 27
-      lastFrame: 49
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []

@@ -8,10 +8,10 @@ public class PlayerAttack : MonoBehaviour
 
     private XboxController controller;
 
-    public Transform armSpawnLeft = null;
-    public Transform armSpawnRight = null;
-    public Transform legSpawnLeft = null;
-    public Transform legSpawnRight = null;
+//    public Transform armSpawnLeft = null;
+//    public Transform armSpawnRight = null;
+//    public Transform legSpawnLeft = null;
+//    public Transform legSpawnRight = null;
     private GameObject attackSphereLeftPunch = null;
     private GameObject attackSphereRightPunch = null;
     private GameObject attackSphereLeftKick = null;
@@ -50,6 +50,13 @@ public class PlayerAttack : MonoBehaviour
 
     public float timer = 0f;
 
+	private Animator anim;
+
+	private void Start()
+	{
+		anim = gameObject.GetComponent<Animator> ();
+	}
+
     private void Update()
     {
 
@@ -72,6 +79,8 @@ public class PlayerAttack : MonoBehaviour
             cooldownTimerLA = cooldownTimeLA;
 
             spawnLengthLA = cooldownTimeLA;
+
+			anim.SetTrigger("L_Attack");
         }
         
         if (spawnLengthLA > 0)
@@ -106,6 +115,8 @@ public class PlayerAttack : MonoBehaviour
             cooldownTimerRA = cooldownTimeRA;
 
             spawnLengthRA = cooldownTimeRA;
+
+			anim.SetTrigger("R_Attack");
         }
         
         if (spawnLengthRA > 0)

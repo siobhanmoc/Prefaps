@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 8fe68e99566837d4fb2fae5a3d326439
-timeCreated: 1527037562
+guid: 2507fc0c6da627644b0a87b1b37a38fe
+timeCreated: 1527038908
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -56,7 +56,7 @@ ModelImporter:
     2000000: back
     2100000: lambert2SG1
     4300000: polySurface1
-    7400000: Take 001
+    7400000: Walk_Anim
     9500000: //RootNode
     13700000: polySurface1
   externalObjects: {}
@@ -85,35 +85,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Take 001
-      takeName: Take 001
-      firstFrame: 27
-      lastFrame: 49
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []

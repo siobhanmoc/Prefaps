@@ -16,10 +16,13 @@ public class PlayerController : MonoBehaviour {
     private PlayerMotor motor;                                                              //player motor class instantitiated as variable motor
     private XboxController controller;                                                      //XBox Controller instant
 
+	private Animator anim;
+
     /*on first run of Player Controller*/
     private void Start()
     {
         motor = GetComponent<PlayerMotor>();                                                //gets components of Player Motor
+		anim = GetComponent<Animator>();
 
        // Cursor.lockState = CursorLockMode.Confined;                                         //locks cursor on center of game screen
        // Cursor.lockState = CursorLockMode.Locked;
@@ -36,6 +39,10 @@ public class PlayerController : MonoBehaviour {
         {
             _xMov = XCI.GetAxis(XboxAxis.LeftStickX, controller);                           //returns the raw float value of movement in the x axis
             _zMov = XCI.GetAxis(XboxAxis.LeftStickY, controller);                           //returns the raw float value of movement in the z axis
+			if (XCI.GetAxis(XboxAxis.LeftStickY, controller) != 0)
+			{anim.SetBool ("Walk", true);}
+			else
+			{anim.SetBool ("Walk", false);}
         }
         else
         {
@@ -56,6 +63,7 @@ public class PlayerController : MonoBehaviour {
         {
             //moves player according to axis of left stick
             _xRot = XCI.GetAxis(XboxAxis.LeftStickX, controller);
+
         }
         else
         {

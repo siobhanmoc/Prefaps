@@ -41,10 +41,13 @@ public class PlayerMotor : MonoBehaviour
 
     private Rigidbody rb;
 
+	private Animator anim;
+
     //Functions
     private void Start()
     {
         rb = GetComponent<Rigidbody>(); //gets component for Rigidbody
+		anim = GetComponent<Animator> ();
     }
 
     /// <summary>
@@ -117,6 +120,8 @@ public class PlayerMotor : MonoBehaviour
         {
             jumpReadyTime = jumpCoolDownTime; //jump ready time is set for jump delay
             jumpButtonPressed = true; //detects that jump has been pressed
+
+			anim.SetTrigger("Jump");
         }
 
         //cools down jump time as long as jump button has been pressed
